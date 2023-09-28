@@ -6,14 +6,14 @@ import {Decal, useGLTF, useTexture} from "@react-three/drei";
 
 const Shirt = () => {
     const snap = useSnapshot(state);
-    console.log('Shirt');
-    const { nodes, materials } = useGLTF("/shirt_baked.glb");
+    console.log('Shirt rendered');
+    const { nodes, materials } = useGLTF('./shirt_baked.glb');
     const logoTexture = useTexture(snap.logoDecal);
     const fullTexture = useTexture(snap.fullDecal);
     return (
         <group>
             <mesh
-                castShadow={false}
+                castShadow
                 geometry={nodes.T_Shirt_male.geometry}
                 material={materials.lambert1}
                 material-roughness={1}
