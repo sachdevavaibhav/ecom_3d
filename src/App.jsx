@@ -1,4 +1,4 @@
-import Canvas from './canvas'
+import CanvasModal from './canvas'
 import Home from './pages/Home'
 import Customizer from './pages/Customizer'
 
@@ -7,10 +7,10 @@ const App = () => {
   return (
     <main className='app transition-all ease-in'>
       <Home />
-      <Canvas />
+      <CanvasModal />
       <Customizer />
     </main>
   )
 }
 
-export default App
+export default App;
